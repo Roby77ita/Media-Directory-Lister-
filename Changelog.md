@@ -10,7 +10,7 @@ is progressive (`5.0zN`), with an incremental number for each substantial change
 _Nothing pending._
 
 ---
-
+## [5.0z13] — 2026-10-31   →   ## [5.1] — 2026-10-31
 ## [5.0z13] — 2026-10-31
 
 ### Changed
