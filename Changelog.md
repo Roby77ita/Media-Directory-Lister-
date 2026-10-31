@@ -9,7 +9,43 @@ is progressive (`major.minor`), with an incremental number for each substantial 
 
 _Nothing pending._
 
+# [5.35] — 2026-10-31
+
+### Changed
+- The update notification has been restored to a discreet text link (instead of the intrusive
+  green button) and is now correctly positioned at the bottom left of the window, right above
+  the status bar.
+
+### Fixed
+- Fixed a Tkinter issue where the update label would disappear if the window was redrawn.
+  The label is now created persistently inside the `costruisci()` method.
+
 ---
+
+## [5.34] — 2026-10-31
+
+### Fixed
+- Fixed the visual placement of the update notification by using `place()` directly on the root
+  window. Although functional, this approach was found to be visually intrusive and replaced
+  in 5.35.
+
+---
+
+## [5.33] — 2026-10-31
+
+### Fixed
+- Fixed a bug in the version comparison logic that prevented the update prompt from appearing
+  even when the remote version was correctly detected as newer.
+
+---
+
+## [5.32] — 2026-10-31
+
+### Fixed
+- Improved the robustness of the GitHub API call by increasing the timeout to 10 seconds and
+  adding detailed console logging for debugging.
+- Replaced the simple `float()` conversion with a tuple-based comparison (e.g., `(5, 32)` vs
+  `(5, 99)`) to correctly handle multi-digit version numbers.
 
 ## [5.24] — 2026-10-31
 
