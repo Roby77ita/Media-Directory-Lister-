@@ -1,3 +1,9 @@
+# [5.38] — 2026-10-31
+
+### Changed -
+Rename in html editor & bugfix
+
+
 # [5.35] — 2026-10-31
 
 ### Changed
