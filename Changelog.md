@@ -9,10 +9,10 @@ is progressive (`major.minor`), with an incremental number for each substantial 
 
 _Nothing pending._
 
-# [5.38] — 2026-10-31
+# [5.41] — 2026-10-31
 
 ### Changed -
-Rename in html editor & bugfix
+bugfix of interface
 
 # [5.35] — 2026-10-31
 
