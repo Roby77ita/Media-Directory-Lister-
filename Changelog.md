@@ -3,11 +3,81 @@
 All notable changes to **Media Directory Lister** are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the versioning
-is progressive (`5.0zN`), with an incremental number for each substantial change.
+is progressive (`major.minor`), with an incremental number for each substantial change.
 
 ## [Unreleased]
 
 _Nothing pending._
+
+---
+
+## [5.8] — 2026-10-31
+
+### Fixed
+- Fixed a crash (`KeyError: 'profilo_generale_nome'`) that occurred when opening the profile menu
+  after the 5.7 update. The missing translation keys have been correctly added for both Italian
+  and English.
+
+---
+
+## [5.7] — 2026-10-31
+
+### Added
+- The default "Generale" profile is now displayed as "General" when the interface language is
+  set to English. The underlying profile name in `config.json` remains unchanged for compatibility.
+
+---
+
+## [5.6] — 2026-10-31
+
+### Fixed
+- Saving a profile from the "Edit profile" or "Exclusions" dialogs now also commits any pending
+  column selections, so the "unsaved changes" prompt no longer appears unnecessarily when
+  closing the program afterwards.
+
+---
+
+## [5.5] — 2026-10-31
+
+### Changed
+- The program now prompts for confirmation before closing if there are unsaved changes
+  (including column selections). "Yes" saves, "No" discards, "Cancel" keeps the program open.
+- Background silent saves have been removed: modifications are only written to `config.json`
+  when the user confirms on exit, or when generating a report (which inherently uses the
+  current settings).
+- Column selections and the "All"/"None" buttons mark the profile as modified, so the
+  confirmation dialog appears when needed.
+
+---
+
+## [5.4] — 2026-10-31
+
+### Fixed
+- Profile column selections and options are now saved automatically when closing the program,
+  even if no other action (like generating a report or switching profile) was performed.
+- Added a one-time informational dialog for users upgrading from older versions, explaining
+  that "Include images" is now a session-only option and no longer saved in the profile.
+
+### Changed
+- Removed the unused `includi_immagini` field from new profiles.
+- Removed the unused `profilo_etichetta` ("Profile:") translation key.
+
+---
+
+## [5.3] — 2026-10-31
+
+### Changed
+- The active profile name in the profile combobox is now displayed in **bold**.
+- The source folder combobox now uses the same larger font (Segoe UI 12) both when closed and
+  when open, improving readability.
+
+---
+
+## [5.2] — 2026-10-31
+
+### Changed
+- The profile combo box no longer repeats the word "Profile:" — it shows only the profile name,
+  since the section header already says "PROFILE".
 
 ---
 ## [5.0z13] — 2026-10-31   →   ## [5.1] — 2026-10-31
